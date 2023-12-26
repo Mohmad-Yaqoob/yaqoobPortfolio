@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaqoob_gmt</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        .logo {
+            color: rgb(45, 162, 205);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Yaqoob</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">contact me</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars   hi" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <div id="element"></div>
+                <h1> Hi, I'm <span class="ccolor"> Mohmad Yaqoob</span><br>
+                    from Ladakh India</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="about">
+        <div class="container2">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="imgg.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Greetings! I'm Mohmad Yaqoob, a Computer Science enthusiast currently immersed in the
+                        captivating challenges of my third year at NIT Silchar. Proudly hailing from the stunning
+                        landscapes of Ladakh.
+                        <br>
+                        As a dedicated Computer Science student, I find joy in unraveling the complexities of technology
+                        and am passionate about leveraging my skills to make a positive impact. My academic journey has
+                        been a thrilling exploration of the world of algorithms, programming languages, and innovative
+                        solutions.
+                        <br>
+                        Beyond the code, I embrace the rich cultural tapestry of Ladakh and carry its spirit with me.
+                        <br>
+                        My academic journey began at Mutahhhary School in Kargil, shaping the foundation of
+                        my learning experience until the 10th grade. Now, I'm part of IAOL in Ladakh—an
+                        organization run by senior students. We're passionate about guiding fellow students through
+                        exams like JEE and others, providing support and preparation strategies.
+                        <br>
+                        One of our proud moments was clinching the 1st position at the Terran Trader competition during
+                        the Tecnosis college fest at NIT Silchar.
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!-- <p class="tab-links" onclick="opentab('experience')" >Experience</p> -->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <li>Technical Skills
+                            <ul>
+                                <li><span>C, C++</span><br></li>
+                                <li><span>HTML, CSS, JAVAScript</span><br></li>
+                                <li><span>MySQL</span><br></li>
+                            </ul>
+                        </li>
+                        <li class="sk-type">soft Skills
+                            <ul>
+                                <li><span>Team Work</span><br></li>
+                                <li> <span>Adaptability</span><br></li>
+                                <li></li><span>Creativity</span><br>
+                        </li>
+                        </ul>
+                        </li>
+
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Btech</span><br>Computer Science and Technology at NIT Silchar</li>
+                            <li><span>High School Diploma (12th Class)</span><br>(CBSE) JNV Kargil Ladakh </li>
+                            <li><span>Secondary Education (10th Class)</span><br>(JKBOSE) Govt. High School Ticket
+                                Kargil</li>
+                        </ul>
+
+                    </div>
+                    <!-- <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span><br></li>
+                        </ul>
+                        
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle"> My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <h2>Virtual Cricket</h2>
+                    <img src="cricket.jpg" alt="">
+                    <p> • Extensively used C++ classes for real-world entities like Player, Team, and Game.
+                        <br>• Implemented game dynamics using member functions and inter-object interactions.
+                        <br>• Utilized C++ standard libraries for functionalities like random number generation, input
+                        validation, and data
+                        management.
+                    </p>
+                    <a href="https://github.com/yaqoobgmt/virtual-criket">Learn more...</a>
+
+                </div>
+                <div>
+                    <h2>kjdsv</h2>
+                    <img src="about.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates accusamus sapiente
+                        dignleniti. Ipsa, hic ad ratione odit labore temporibus velit beatae delectus
+                        repudiandae aliquam reiciendis architecto consectetur quod nulla perferendis omnis ducimus
+                        sequi, repellendus quam quis! Doloremque repudiandae quae aperiam facere ad sunt? Debitis
+                        minus corrupti iusto placeat.</p>
+                    <a href="#">learn more...</a>
+                </div>
+                <!-- 
+                <div>
+                    <h2>ghsh</h2>
+                    <img src="about.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, possimus cumque reiciendis
+                        magnam iudolodantium repellat voluptas ipsam accusantium? Laudantium doloribus unde,
+                        nulla, voluptas dolorum debitis rem quibusdam commodi aliquid rerum exercitationem harum
+                        l soluta ducimus deleniti error?</p>
+                    <a href="#">learn more...</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ----contact---- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> yaqoobgmt26@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 9622622845</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mohmad-yaqoob-120634231/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/YaqoobGmt?t=IDkznzKXbtd5qUiG22fLWA&s=09"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/yaqoob_gmt/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/mohmmad.yaqoob.100"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1U03Fe4-0bG0lQY0a1hOvX-54Mtk4xaAK/view?usp=sharing"
+                        class="btn btn2">Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Youe Message or Suggestion"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © www.mohmadyaqoobportfolio.com | All rights reversed</p>
+    </div>
+    </main>
+
+
+
+
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Problem solver', 'Web developer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkesfL_fZGnD8n2Wfyn7NTvBcKeh023PIxDRct8jYLL8d7ziqNQPpzWZpngZUsp74C/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent Successfully!!!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
