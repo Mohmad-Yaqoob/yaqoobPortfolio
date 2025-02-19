@@ -103,7 +103,22 @@ Now, as I approach graduation, I am eager to explore opportunities that align wi
             </div>
         </div>
     </div>
-
+    <section id="intern-experience">
+    <h2>Intern Experience</h2>
+    <div class="intern-card">
+        <h3>Research Intern | SN Bose Internship Program 2024</h3>
+        <p><strong>Duration:</strong> May 2024 – July 2024</p>
+        <p><strong>Project:</strong> E-Waste segregation using Deep Learning</p>
+        <p><strong>Technologies Used:</strong> Custom CNN, Inception V3, ResNet152</p>
+        <ul>
+            <li>Developed and implemented CNN, Inception V3, and ResNet152 models for e-waste classification.</li>
+            <li>Applied data augmentation, pre-trained architectures, and deep learning techniques.</li>
+            <li>ResNet152 achieved 99% accuracy, outperforming Inception V3 (96%) and baseline CNN (86%).</li>
+            <li>Conducted model evaluation using precision, recall, and F1 score.</li>
+        </ul>
+        <p><strong>Outcome:</strong> Achieved state-of-the-art accuracy in classifying e-waste components, contributing to an AI-driven sustainable approach.</p>
+    </div>
+</section>
 
     <!-- projects -->
     <div id="projects">
@@ -240,7 +255,40 @@ platform.
             typeSpeed: 50,
         });
     </script>
+    <script>
+        const internships = [
+    {
+        title: "Research Intern | SN Bose Internship Program 2024",
+        duration: "May 2024 – July 2024",
+        project: "E-Waste Management using Deep Learning",
+        technologies: ["Custom CNN", "Inception V3", "ResNet152", "TensorFlow", "Python"],
+        contributions: [
+            "Developed and implemented CNN, Inception V3, and ResNet152 models for e-waste classification.",
+            "Applied data augmentation, pre-trained architectures, and deep learning techniques.",
+            "ResNet152 achieved 99% accuracy, outperforming Inception V3 (96%) and baseline CNN (57%).",
+            "Conducted model evaluation using precision, recall, and F1 score."
+        ],
+        outcome: "Achieved state-of-the-art accuracy in classifying e-waste components, contributing to an AI-driven sustainable approach."
+    }
+];
 
+const container = document.getElementById("intern-experience");
+
+internships.forEach((intern) => {
+    const div = document.createElement("div");
+    div.className = "intern-card";
+    div.innerHTML = `
+        <h3>${intern.title}</h3>
+        <p><strong>Duration:</strong> ${intern.duration}</p>
+        <p><strong>Project:</strong> ${intern.project}</p>
+        <p><strong>Technologies Used:</strong> ${intern.technologies.join(", ")}</p>
+        <ul>${intern.contributions.map(point => `<li>${point}</li>`).join("")}</ul>
+        <p><strong>Outcome:</strong> ${intern.outcome}</p>
+    `;
+    container.appendChild(div);
+});
+
+    </script>
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
