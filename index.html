@@ -228,12 +228,13 @@ platform.
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message or Suggestion"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="Message" rows="6" placeholder="Your Message or Suggestion"></textarea>
+    <button type="submit" class="btn btn2">Submit</button>
+</form>
+<span id="msg"></span>
+
 
                 </div>
             </div>
@@ -255,7 +256,7 @@ platform.
             typeSpeed: 50,
         });
     </script>
-    <script>
+<!--     <script>
         const internships = [
     {
         title: "Research Intern | SN Bose Internship Program 2024",
@@ -270,25 +271,25 @@ platform.
         ],
         outcome: "Achieved state-of-the-art accuracy in classifying e-waste components, contributing to an AI-driven sustainable approach."
     }
-];
+]; -->
 
-const container = document.getElementById("intern-experience");
+// const container = document.getElementById("intern-experience");
 
-internships.forEach((intern) => {
-    const div = document.createElement("div");
-    div.className = "intern-card";
-    div.innerHTML = `
-        <h3>${intern.title}</h3>
-        <p><strong>Duration:</strong> ${intern.duration}</p>
-        <p><strong>Project:</strong> ${intern.project}</p>
-        <p><strong>Technologies Used:</strong> ${intern.technologies.join(", ")}</p>
-        <ul>${intern.contributions.map(point => `<li>${point}</li>`).join("")}</ul>
-        <p><strong>Outcome:</strong> ${intern.outcome}</p>
-    `;
-    container.appendChild(div);
-});
+// internships.forEach((intern) => {
+//     const div = document.createElement("div");
+//     div.className = "intern-card";
+//     div.innerHTML = `
+//         <h3>${intern.title}</h3>
+//         <p><strong>Duration:</strong> ${intern.duration}</p>
+//         <p><strong>Project:</strong> ${intern.project}</p>
+//         <p><strong>Technologies Used:</strong> ${intern.technologies.join(", ")}</p>
+//         <ul>${intern.contributions.map(point => `<li>${point}</li>`).join("")}</ul>
+//         <p><strong>Outcome:</strong> ${intern.outcome}</p>
+//     `;
+//     container.appendChild(div);
+// });
 
-    </script>
+//     </script>
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
@@ -317,21 +318,32 @@ internships.forEach((intern) => {
         }
     </script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkesfL_fZGnD8n2Wfyn7NTvBcKeh023PIxDRct8jYLL8d7ziqNQPpzWZpngZUsp74C/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent Successfully!!!"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkesfL_fZGnD8n2Wfyn7NTvBcKeh023PIxDRct8jYLL8d7ziqNQPpzWZpngZUsp74C/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            if (!response.ok) throw new Error("Form submission failed");
+            
+            msg.innerHTML = "✅ Message sent successfully!";
+            msg.classList.remove("error");
+            msg.style.color = "green";
+
+            setTimeout(() => { msg.innerHTML = ""; }, 5000);
+            form.reset();
         })
+        .catch(error => {
+            msg.innerHTML = "❌ Failed to send message. Try again!";
+            msg.classList.add("error");
+            msg.style.color = "red";
+            console.error('Error!', error.message);
+        });
+});
+
     </script>
 </body>
 
