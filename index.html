@@ -1,322 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaqoob_gmt</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Mohmad Yaqoob | Data Science & MLOps</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <style>
-        .logo {
-            color: rgb(45, 162, 205);
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #050a14;
+        }
+
+        section { padding: 100px 0; }
+        .subtitle { font-size: 2.5rem; margin-bottom: 40px; }
+
+        /* Balanced Grid for Projects */
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+        }
+
+        .tag {
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            background: #2563eb;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .btn-ml {
+            margin-top: auto; /* Pushes button to bottom of equal-height boxes */
+            padding: 10px 20px;
+            display: inline-block;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+    <div id="particles-js"></div>
+
     <div id="header">
         <div class="container">
             <nav>
-                <h1 class="logo">Yaqoob</h1>
+                <h1 class="logo">Yaqoob<span style="color: #fff;">.ai</span></h1>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">contact me</a></li>
+                    <li><a href="#projects">Lab</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-bars   hi" onclick="openmenu()"></i>
-
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <div id="element"></div>
-                <h1> Hi, I'm <span class="ccolor"> Mohmad Yaqoob</span><br>
-                    from Ladakh India</h1>
+
+            <div class="header-text" data-aos="fade-right">
+                <p style="font-family: 'JetBrains Mono'; color: var(--accent-color);">> Terminal Active</p>
+                <h1>Hi, I'm <span class="ccolor">Mohmad Yaqoob</span></h1>
+                <h2 style="font-size: 2rem;">I specialize in <span id="element"></span></h2>
+                <p style="margin-top: 20px; max-width: 600px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+                    M.Tech Data Science & AI candidate at IIT Madras. Journeying from the heights of Ladakh to building scalable machine learning pipelines and production-ready deep learning systems.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="#projects" class="btn-ml">View My Lab</a>
+                    <a href="#contact" class="btn-ml" style="background: transparent; border: 1px solid #38bdf8; margin-left: 15px;">Get In Touch</a>
+                </div>
             </div>
         </div>
     </div>
 
-
-
-    <div id="about">
-        <div class="container2">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="imgg.png">
+    <section id="about">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: flex-start; gap: 50px; flex-wrap: wrap;">
+                <div class="about-col-1" data-aos="fade-up" style="flex: 1; min-width: 320px;">
+                    <img src="png.png" alt="Mohmad Yaqoob" style="width: 100%; border-radius: 20px; box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);">
                 </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>
-                        Greetings! I'm Mohmad Yaqoob, a final-year Computer Science student at NIT Silchar.
-<br>
-As a Computer Science enthusiast, I enjoy exploring the intricacies of technology and am passionate about applying my skills to solve real-world problems. My journey has been shaped by a strong foundation in problem-solving, software development, and research, with a keen interest in AI, Deep Learning and full-stack development.
-<br>
-My academic path began at Mutahhhary Public School Kargil, where I started my early education. I then pursued my 9th and 10th grades at Govt. High School Taikat, followed by my 11th and 12th at JNV Kargil.After completing my schooling, I cleared the JEE Main exam, which paved the way for my admission to NIT Silchar.Beyond academics, I am actively involved with IAOL in Ladakh—an initiative led by senior students to mentor and guide aspiring candidates for exams like JEE and other competitive tests.
-<br>
-During my time at NIT Silchar, I have participated in various technical and innovation-driven events. One of my proud moments was securing 1st place in the Terran Trader competition during the Tecnosis college fest, reflecting my ability to think strategically and work collaboratively.
-<br>
-Now, as I approach graduation, I am eager to explore opportunities that align with my skills and interests, contributing to impactful projects and innovations.
-
-
+                <div class="about-col-2" data-aos="fade-up" data-aos-delay="200" style="flex: 2; min-width: 350px;">
+                    <h1 class="subtitle">Neural Network of Me</h1>
+                    <p style="line-height: 1.8;">
+                        I am an M.Tech student in Data Science and Artificial Intelligence at IIT Madras, driven by a passion for turning raw data into actionable intelligence. My journey ranges from high-altitude schooling in Kargil to completing my B.Tech in CSE at NIT Silchar. 
+                        <br><br>
+                        Today, my work focuses on Machine Learning, Deep Learning, and Generative AI—specifically LLMs, RAG, and Agentic AI systems. I specialize in building end-to-end Python workflows, from data preprocessing and feature engineering to deployment-oriented pipelines. Ultimately, my goal is to bridge AI research and ML engineering, ensuring models don't just work in Jupyter notebooks, but thrive in production.
                     </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <!-- <p class="tab-links" onclick="opentab('experience')" >Experience</p> -->
+                    <div class="tab-titles" style="display: flex; margin: 30px 0;">
+                        <p class="tab-links active-link" onclick="opentab('skills')" style="cursor:pointer; margin-right: 30px;">Tech Stack</p>
+                        <p class="tab-links" onclick="opentab('education')" style="cursor:pointer;">Education</p>
                     </div>
+
                     <div class="tab-contents active-tab" id="skills">
-                        <li>Technical Skills
-                            <ul>
-                                <li><span>C, C++, JAVA</span><br></li>
-                                <li><span>HTML, CSS, JAVAScript, Node, Express, React</span><br></li>
-                                <li><span>MySQL, MongoDB</span><br></li>
-                            </ul>
-                        </li>
-                        <li class="sk-type">soft Skills
-                            <ul>
-                                <li><span>Team Work</span><br></li>
-                                <li> <span>Adaptability</span><br></li>
-                                <li></li><span>Creativity</span><br>
-                        </li>
+                        <ul style="list-style: none; line-height: 2;">
+                            <li><span class="ccolor" style="font-weight:bold;">AI/ML:</span> PyTorch, TensorFlow, Hugging Face, Scikit-Learn</li>
+                            <li><span class="ccolor" style="font-weight:bold;">MLOps/Tools:</span> Docker, Streamlit, FAISS, LangGraph, DVC, Git</li>
+                            <li><span class="ccolor" style="font-weight:bold;">Data:</span> SQL, MongoDB, Pandas, NumPy, OpenCV</li>
+                            <li><span class="ccolor" style="font-weight:bold;">Languages:</span> Python, C++</li>
                         </ul>
-                        </li>
-
                     </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Btech</span><br>Computer Science and Engineering at NIT Silchar</li>
-                            <li><span>High School Diploma (12th Class)</span><br>(CBSE) JNV Kargil Ladakh </li>
-                            <li><span>Secondary Education (10th Class)</span><br>(JKBOSE) Govt. High School Ticket
-                                Kargil</li>
-                        </ul>
 
-                    </div>
-                    <!-- <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Fresher</span><br></li>
+                    <div class="tab-contents" id="education" style="display:none;">
+                        <ul style="list-style: none; line-height: 2;">
+                            <li><span class="ccolor" style="font-weight:bold;">2025-2027:</span> M.Tech Data Science & AI - IIT Madras</li>
+                            <li><span class="ccolor" style="font-weight:bold;">2021-2025:</span> B.Tech CSE - NIT Silchar</li>
+                            <li><span class="ccolor" style="font-weight:bold;">2020:</span> Class 12th - JNV Kargil, Ladakh</li>
                         </ul>
-                        
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <section id="intern-experience">
-    <h2>Intern Experience</h2>
-    <div class="intern-card">
-        <h3>Research Intern | SN Bose Internship Program 2024</h3>
-        <p><strong>Duration:</strong> May 2024 – July 2024</p>
-        <p><strong>Project:</strong> E-Waste segregation using Deep Learning</p>
-        <p><strong>Technologies Used:</strong> Custom CNN, Inception V3, ResNet152</p>
-        <ul>
-            <li>Developed and implemented CNN, Inception V3, and ResNet152 models for e-waste classification.</li>
-            <li>Applied data augmentation, pre-trained architectures, and deep learning techniques.</li>
-            <li>ResNet152 achieved 99% accuracy, outperforming Inception V3 (96%) and baseline CNN (86%).</li>
-            <li>Conducted model evaluation using precision, recall, and F1 score.</li>
-        </ul>
-        <p><strong>Outcome:</strong> Achieved state-of-the-art accuracy in classifying e-waste components, contributing to an AI-driven sustainable approach.</p>
-    </div>
-</section>
+    </section>
 
-    <!-- projects -->
-    <div id="projects">
+    <section id="projects">
         <div class="container">
-            <h1 class="subtitle"> My Projects</h1>
+            <h1 class="subtitle">Research & Lab</h1>
             <div class="project-list">
-                <div>
-                    <h2>Gmt Vid Call</h2>
-                    <img src="banner.png" alt="">
-                    <p> • A video call application that allows users to join virtual meetings with video, audio, and screen sharing
-functionalities. Built a real-time communication system using WebRTC. Designed the front-end using React to provide a seamless user experience. Deployed the application on Render, enabling users to join meetings from anywhere with a web browser.
-platform.
-                        <br>• Technologies: React, Node.js, Express, MongoDB, WebRTC, Axios, CSS/HTML
-                    </p> <br>
-                    <a href="https://gmtzoom-video-call-frontend.onrender.com/" style="text-decoration: none; color: black;">visit site</a>
                 
-                    <a href="https://github.com/Mohmad-Yaqoob/gmtZoom-video-call">Learn more...</a>
-
-                </div>
-                <div>
-                    <h2>myAwayHome</h2>
-                    <img src="home.jpg" alt="">
-                    <p> • An innovative project aimed at transforming the way people find accommodation while traveling. Whether you’re
-a traveler seeking a room or a homeowner looking to rent out your property, Homely Hub provides a seamless
-platform.
-                        <br>• Technologies Used: React, MongoDB
-                    </p>
-                    <a href="https://github.com/Mohmad-Yaqoob/myAwayHome">Learn more...</a>
-
-                </div>
-                <div>
-                    <h2>Simon Game</h2>
-                    <img src="simonGame.png" alt="">
-                    <p> • Simon is a timeless game that offers a fun and engaging way to test and improve your memory skills. Whether you're looking to challenge yourself or compete with friends, Simon provides endless entertainment with its simple yet addictive gameplay.
-                        <br>• Technologies Used: HTML, CSS, JavaScript
-                    </p> <br>
-                <a href="https://simongame1.vercel.app/" style="text-decoration: none; color: black;">Play Game</a>
-                
-                    <a href="https://github.com/Mohmad-Yaqoob/SimonGame">Learn more...</a>
-
-                </div>
-                 <div>
-                    <h2>Spotify Clone</h2>
-                    <img src="spo_clone.jpg" alt="">
-                    <p> • Spotify Clone frontend only
-platform.
-                        <br>• Technologies Used: HTML, CSS
-                    </p>
-                    <a href="https://github.com/Mohmad-Yaqoob/spotify-clone">Learn more...</a>
-
-                </div>
-                <div>
-                    <h2>Virtual Cricket</h2>
-                    <img src="cricket.jpg" alt="">
-                    <p> • Extensively used C++ classes for real-world entities like Player, Team, and Game.
-                        <br>• Implemented game dynamics using member functions and inter-object interactions.
-                        <br>• Utilized C++ standard libraries for functionalities like random number generation, input
-                        validation, and data
-                        management.
-                    </p>
-                    <a href="https://github.com/yaqoobgmt/virtual-criket">Learn more...</a>
-
-                </div>
-                <div>
-                    <h2>Drum Kit</h2>
-                    <a href="https://yaqoobgmt.github.io/kit-drum/" class="check">click here</a>
-                    <img src="drumkit.jpg" alt="">
-                    
-                    <p> The Drum Kit web application is a fun and interactive project that allows users to play virtual
-                        drum sounds using both mouse clicks and keyboard inputs. The project provides an engaging and
-                        visually appealing user interface, creating a virtual drum set that responds to user actions.
-                    </p>
-                    <a href="https://github.com/yaqoobgmt/kit-drum">learn more...</a>
-                </div>
-                <!-- 
-                <div>
-                    <h2>ghsh</h2>
-                    <img src="about.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, possimus cumque reiciendis
-                        magnam iudolodantium repellat voluptas ipsam accusantium? Laudantium doloribus unde,
-                        nulla, voluptas dolorum debitis rem quibusdam commodi aliquid rerum exercitationem harum
-                        l soluta ducimus deleniti error?</p>
-                    <a href="#">learn more...</a>
-                </div> -->
-            </div>
-        </div>
-    </div>
-
-    <!-- ----contact---- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> yaqoobgmt26@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 9622622845</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/mohmad-yaqoob-120634231/"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/YaqoobGmt?t=IDkznzKXbtd5qUiG22fLWA&s=09"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/yaqoob_gmt/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/mohmmad.yaqoob.100"><i class="fab fa-facebook"></i></a>
+                <div class="project-card" data-aos="zoom-in" style="border: 1px solid rgba(56, 189, 248, 0.4); background: rgba(7, 15, 30, 0.9);">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #0ea5e9;">MLOps</span>
+                        <span class="tag" style="background: #6366f1;">DVC</span>
+                        <span class="tag">Transfer Learning</span>
                     </div>
-                    <a href="https://drive.google.com/file/d/1d554U9L35JKNv6rXf-pu6d1jml7AbeOr/view?usp=sharing"
-                        class="btn btn2">Resume</a>
+                    <h2 style="color: #38bdf8; margin-bottom: 15px;"><i class="fas fa-microchip"></i> Cattle Muzzle Biometrics</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">A fully reproducible biometric identification pipeline using DVC. Built a 4-stage automated workflow (Prepare → Transform → Train → Evaluate) achieving <strong>0.92 Macro F1</strong> using MobileNetV2 with TTA.</p>
+                    <div style="margin-bottom: 20px; font-family: 'JetBrains Mono'; font-size: 0.8rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px;">
+                        > dvc repro<br>> dvc metrics show (F1: 0.9211)
+                    </div>
+                    <a href="https://github.com/DA5402-MLOps-JAN26/assignment-3-Mohmad-Yaqoob" class="btn-ml" target="_blank">Source & Pipeline</a>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-    <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="Message" rows="6" placeholder="Your Message or Suggestion"></textarea>
-    <button type="submit" class="btn btn2">Submit</button>
-</form>
-<span id="msg"></span>
 
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag">GenAI</span><span class="tag">LangGraph</span><span class="tag">RAG</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">Agentic RAG Chatbot</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 20px;">Developed an agentic Retrieval-Augmented Generation (RAG) system for multi-turn, document-grounded question answering. Orchestrated intelligent agents using LangGraph and integrated FAISS vector search.</p>
+                    <a href="https://github.com/Mohmad-Yaqoob/yaqoob-chatbot" class="btn-ml" target="_blank">View GitHub</a>
+                </div>
 
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #fbbf24; color: #000;">Data Analytics</span>
+                        <span class="tag">Seaborn</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">Movie Success Visualization</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">Explored factor-driven success in TMDB metadata. Managed data cleaning by treating 0-values as NaN and used Log-transformations to uncover hidden trends in right-skewed revenue data.</p>
+                    <div style="margin-bottom: 20px; border-left: 3px solid #38bdf8; padding-left: 15px; font-size: 0.85rem; color: #94a3b8;">
+                        Validated: Budget ↔ Revenue linkage.<br>Debunked: Budget ↔ Rating correlation.
+                    </div>
+                    <a href="https://github.com/Mohmad-Yaqoob/Visualization-Uncovering-the-Story-Behind-Movie-Success" class="btn-ml" target="_blank">View Analysis</a>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #ef4444;">Healthcare AI</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">Heart Disease Prediction</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">Implemented a Logistic Regression classifier to predict heart disease likelihood. Leveraged health markers like cholesterol and BP to enable early medical intervention.</p>
+                    <div style="margin-bottom: 20px; background: rgba(239, 68, 68, 0.05); padding: 10px; border: 1px dashed rgba(239, 68, 68, 0.3); font-size: 0.85rem; color: #94a3b8;">
+                        <i class="fas fa-check-circle" style="color:#ef4444;"></i> Achieved 85.12% Test Accuracy.
+                    </div>
+                    <a href="https://github.com/Mohmad-Yaqoob/HeartDisease" class="btn-ml" target="_blank">View Repository</a>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="250" style="border-left: 4px solid #6366f1;">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #4ade80; color: #064e3b;">NumPy Scratch</span>
+                        <span class="tag">W&B Logging</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">NumPy MLP from Scratch</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">Configurable MLP engine built using pure NumPy. Features backpropagation, Xavier init, and 6 optimizers (Adam, Nadam, etc.). Tracked experiments via Weights & Biases.</p>
+                    <div style="margin-bottom: 20px; font-family: 'JetBrains Mono'; font-size: 0.8rem; color: #94a3b8; background: rgba(99, 102, 241, 0.1); padding: 10px; border-radius: 5px;">
+                        MNIST Acc: 97.8% | Fashion-MNIST F1: 0.88
+                    </div>
+                    <a href="https://github.com/Mohmad-Yaqoob/DA6401_Assignment_1_DA25M017" class="btn-ml" target="_blank">View GitHub</a>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300" style="border: 1px solid rgba(56, 189, 248, 0.4);">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #a855f7;">Metric Learning</span>
+                        <span class="tag">ResNet-MLP</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px; color: #38bdf8;">Metric Learning Prediction</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">Deep ResNet-MLP pipeline for prompt-response fitness scoring. Features KL Histogram Loss for matching score distributions and SWA/EMA for training stability.</p>
+                    <div style="margin-bottom: 20px; font-size: 0.8rem; color: #64748b;">
+                        <i class="fas fa-database"></i> High-Dim Feature Vector (3073D)
+                    </div>
+                    <a href="https://github.com/Mohmad-Yaqoob" class="btn-ml" target="_blank">Explore Pipeline</a>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="350">
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <span class="tag" style="background: #10b981;">Ensemble Learning</span>
+                        <span class="tag">Stacking</span>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">Bike Demand Prediction</h2>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 15px;">Ensemble regression suite benchmarking Bagging, Boosting, and Stacking. Captures temporal patterns via Sine/Cosine cyclic feature encoding.</p>
+                    <div style="margin-bottom: 20px; border-left: 3px solid #10b981; padding-left: 15px; font-size: 0.85rem; color: #94a3b8;">
+                        RMSE: 42.18 (Extended Stacking) vs baseline (100.45).
+                    </div>
+                    <a href="https://github.com/Mohmad-Yaqoob/Ensemble-Learning" class="btn-ml" target="_blank">View Notebook</a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row" style="display:flex; flex-wrap:wrap; gap:50px;">
+                <div class="contact-left" data-aos="fade-up" style="flex:1; min-width:300px;">
+                    <h1 class="subtitle">Initiate Connection</h1>
+                    <p style="margin:20px 0;"><i class="fas fa-paper-plane ccolor"></i> yaqoobnits25@gmail.com</p>
+                    <p style="margin:20px 0;"><i class="fas fa-phone ccolor"></i> +91 9395739252</p>
+                    <div class="social-icons" style="margin-top: 30px;">
+                        <a href="https://www.linkedin.com/in/mohmad-yaqoob-120634231/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Mohmad-Yaqoob" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/YaqoobGmt" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/yaqoob_gmt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1KXhSz3MiyeB52gtyoSIzne2K-FEdg5e0/view?usp=sharing" target="_blank" class="btn-ml" style="display:inline-block; margin-top:40px;">Download Resume</a>
+                </div>
+                <div class="contact-right" data-aos="fade-up" data-aos-delay="200" style="flex:1.5; min-width:320px;">
+                    <form id="contact-form">
+                        <input type="text" name="user_name" placeholder="Your Name" required style="background:#0f172a; border:1px solid #333; color:#fff; padding:15px; margin-bottom:15px; width:100%; border-radius:8px;">
+                        <input type="email" name="user_email" placeholder="Your Email" required style="background:#0f172a; border:1px solid #333; color:#fff; padding:15px; margin-bottom:15px; width:100%; border-radius:8px;">
+                        <textarea name="message" rows="6" placeholder="Project details or collaboration ideas..." style="background:#0f172a; border:1px solid #333; color:#fff; padding:15px; margin-bottom:15px; width:100%; border-radius:8px;"></textarea>
+                        <button type="submit" class="btn-ml" style="width:100%; cursor:pointer; border:none; font-weight:bold;">Transmit Message</button>
+                    </form>
+                    <span id="msg" style="display:block; margin-top:15px;"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" style="text-align: center; padding: 40px 20px; background: #020617; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="footer-social-icons" style="margin-bottom: 20px;">
+            <a href="https://github.com/Mohmad-Yaqoob" target="_blank" style="margin: 0 15px; color: #94a3b8; font-size: 22px;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohmad-yaqoob-120634231/" target="_blank" style="margin: 0 15px; color: #94a3b8; font-size: 22px;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/YaqoobGmt/" target="_blank" style="margin: 0 15px; color: #94a3b8; font-size: 22px;"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yaqoob_gmt/" target="_blank" style="margin: 0 15px; color: #94a3b8; font-size: 22px;"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="font-size: 0.9rem; color: #64748b;">© 2026 Mohmad Yaqoob | Built with Data & Curiosity</p>
     </div>
 
-    <div class="copyright">
-        <p>Copyright © www.mohmadyaqoobportfolio.com | All rights reserved</p>
-    </div>
-    </main>
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Problem solver', 'Web developer'],
-            typeSpeed: 50,
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#38bdf8" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#38bdf8", "opacity": 0.2, "width": 1 },
+                "move": { "enable": true, "speed": 2 }
+            }
         });
-    </script>
-<!--     <script>
-        const internships = [
-    {
-        title: "Research Intern | SN Bose Internship Program 2024",
-        duration: "May 2024 – July 2024",
-        project: "E-Waste Management using Deep Learning",
-        technologies: ["Custom CNN", "Inception V3", "ResNet152", "TensorFlow", "Python"],
-        contributions: [
-            "Developed and implemented CNN, Inception V3, and ResNet152 models for e-waste classification.",
-            "Applied data augmentation, pre-trained architectures, and deep learning techniques.",
-            "ResNet152 achieved 99% accuracy, outperforming Inception V3 (96%) and baseline CNN (57%).",
-            "Conducted model evaluation using precision, recall, and F1 score."
-        ],
-        outcome: "Achieved state-of-the-art accuracy in classifying e-waste components, contributing to an AI-driven sustainable approach."
-    }
-]; -->
 
-    <script>
+        var typed = new Typed('#element', {
+            strings: ['Machine Learning', 'Deep Learning', 'MLOps', 'Generative AI', 'Agentic AI'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            for (tablink of tablinks) tablink.classList.remove("active-link");
+            for (tabcontent of tabcontents) tabcontent.style.display = "none";
             event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+            document.getElementById(tabname).style.display = "block";
         }
 
-    </script>
-    <script>
+        AOS.init({ duration: 800, once: true });
 
         var sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-200px"; }
 
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px"
-        }
+        emailjs.init("jZ3EPu9Uc53342nkU");
+        const contactForm = document.getElementById('contact-form');
+        const msgElement = document.getElementById("msg");
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            btn.innerText = 'Transmitting...';
+            emailjs.sendForm('service_rm7w8im', 'template_jk85kkz', this)
+                .then(function() {
+                    msgElement.innerHTML = "<span style='color: #38bdf8;'>Message successfully transmitted!</span>";
+                    contactForm.reset();
+                    btn.innerText = 'Transmit Message';
+                }, function(error) {
+                    msgElement.innerHTML = "<span style='color: red;'>Transmission failed. Try again.</span>";
+                    btn.innerText = 'Transmit Message';
+                });
+        });
     </script>
-    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz0HwAF0MVhtKf0Q_mlJ7iD7_lVoJgrRMFm5G3y2PLECnU40yHQneCJ1bhRvydGsyyP/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                msg.innerHTML = "Message sent Successfully!!!";
-                setTimeout(() => msg.innerHTML = "", 5000);
-                form.reset();
-            })
-            .catch(error => console.error('Error!', error.message));
-    });
-</script>
-
 </body>
-
 </html>
