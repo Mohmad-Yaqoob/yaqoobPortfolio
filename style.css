@@ -20,6 +20,40 @@ body {
     line-height: 1.6;
 }
 
+/* --- HERO SECTION (HEADER) --- */
+#header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(5, 10, 20, 1)), url("background.png");
+    background-size: cover;
+    background-position: center;
+    
+    /* CHANGE THIS LINE FROM 'fixed' TO 'scroll' */
+    background-attachment: scroll; 
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.container { 
+    padding: 0 10%; 
+    width: 100%;
+}
+
+.header-text h1 {
+    font-size: 3.5rem; /* Standardizing size */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
+}
+
+/* Ensure the particle background stays behind the other sections */
+#particles-js {
+    position: fixed;
+    z-index: -1; 
+}
+
 /* --- ABOUT SECTION LAYOUT --- */
 #about .row {
     display: flex;
@@ -60,6 +94,42 @@ body {
 .tab-titles {
     display: flex;
     margin: 30px 0 20px;
+}
+/* --- ABOUT PHOTO "DULL" EFFECT --- */
+.about-photo-wrapper {
+    width: 320px; /* Force a consistent width to match your screenshot */
+    height: 400px; /* Force a consistent height to keep it a rectangle */
+    border-radius: 20px;
+    
+    /* YOUR PHOTO IS USED HERE AS A BACKGROUND */
+    background-image: url("png.png");
+    background-size: cover;
+    background-position: center top; /* Keeps your face focused */
+    
+    position: relative;
+    overflow: hidden;
+    
+    /* A soft blue shadow and border to give it that "glowing UI" feel */
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+/* This is the dark overlay layer that creates the "dull" effect */
+.about-photo-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* This creates a soft transition, from a 60% dark overlay to an 85% dark overlay at the bottom */
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(5, 10, 20, 0.85));
+}
+
+/* Hover effect: The Dull effect slightly lifts when you hover */
+.about-photo-wrapper:hover .about-photo-filter {
+    opacity: 0.7; /* Becomes slightly brighter on hover */
+    transition: opacity 0.3s;
 }
 
 .tab-links {
@@ -128,12 +198,6 @@ body {
 }
 
 /* Hero Section with Glassmorphism */
-#header {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at top right, #1e293b, #050a14);
-}
 
 .container { padding: 0 10%; }
 
@@ -288,4 +352,55 @@ nav .fas {
 .social-icons a:hover {
     color: #38bdf8;
     transform: translateY(-3px); /* Subtle lift on hover */
+}
+/* --- CLEANUP & MOBILE FIXES --- */
+
+/* Fix the About Photo for all screens */
+.about-photo-wrapper {
+    width: 100%;
+    max-width: 350px; /* Limits size on desktop */
+    aspect-ratio: 3/4; /* Keeps it a consistent rectangle */
+    border-radius: 20px;
+    background-image: url("png.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto; /* Centers it when it stacks on mobile */
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+/* Fix the project grid so it doesn't overlap on iPads/Tablets */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+/* Ensure the background image doesn't zoom in weirdly on mobile */
+@media only screen and (max-width: 768px) {
+    #header {
+        background-attachment: scroll !important; /* Fixed background breaks on many mobile browsers */
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px;
+    }
+    
+    .header-text h1 {
+        font-size: 2.4rem; /* Smaller title for phones */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100% !important;
+        text-align: center;
+    }
+
+    .tab-titles {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .tab-links {
+        margin-right: 0; /* Clears the desktop margin */
+    }
 }
