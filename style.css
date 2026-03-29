@@ -275,3 +275,17 @@ nav .fas {
     color: var(--accent); /* Lights up with your Data Blue color */
     transform: translateY(-5px); /* Cool little bounce up */
 }
+/* Space out the social icons in the contact section */
+.social-icons a {
+    text-decoration: none;
+    font-size: 22px; /* Making them slightly larger for better visibility */
+    margin-right: 20px; /* This adds the space you need */
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #38bdf8;
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
